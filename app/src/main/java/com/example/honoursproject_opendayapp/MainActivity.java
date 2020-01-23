@@ -14,8 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private Button schedule_button;
     private Button parking_button;
     private Button campusmap_button;
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
