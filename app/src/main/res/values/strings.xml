@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name"></string>
     <string name="accommodation">Accommodation</string>
-    <string name="activties">Activties in Hull</string>
+    <string name="activties">Things to do in Hull</string>
     <string name="schedule">My Schedule</string>
     <string name="parking">Parking</string>
     <string name="campusmap">Campus Map</string>
+    <string name="homescreen">Home</string>
 </resources>
