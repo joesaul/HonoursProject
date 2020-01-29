@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button accommodation_button;
+    public Button accommodation_button;
     private Button activities_button;
     private Button schedule_button;
     private Button parking_button;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         campusmap_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openSchedule();
+                openCampusMap();
             }
         });
     }
@@ -91,12 +91,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //@Override
-    //public boolean onCreateOptionsMenu(Menu menu){
-    //    MenuInflater inflater = getMenuInflater();
-    //    inflater.inflate(R.menu.example_menu, menu);
-    //    return true;
-    //}
+
 
 
 }

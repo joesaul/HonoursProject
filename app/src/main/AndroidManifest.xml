@@ -9,11 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CampusMap"/>
-        <activity android:name=".Parking" />
-        <activity android:name=".Schedule" />
-        <activity android:name=".Activities" />
-        <activity android:name=".Accommodation" />
+        <activity android:name=".CampusMap"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".Parking"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".Schedule"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".Activities"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".Accommodation"
+                android:parentActivityName=".MainActivity">
+        </activity>
         <activity android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
