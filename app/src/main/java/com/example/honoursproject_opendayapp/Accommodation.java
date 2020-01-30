@@ -4,18 +4,66 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 public class Accommodation extends AppCompatActivity {
+
+    private Button courtyard_button;
+    private Button westfield_button;
+    private Button taylorcourt_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accommodation);
 
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
+
+        courtyard_button = findViewById(R.id.courtyard_button);
+        courtyard_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCourtyard();
+            }
+        });
+
+        westfield_button = findViewById(R.id.westfield_button);
+        westfield_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openWestfield();
+            }
+        });
+
+        taylorcourt_button = findViewById(R.id.taylorcourt_button);
+        taylorcourt_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTaylorCourt();
+            }
+        });
+    }
+
+    private void openCourtyard(){
+        Intent intent = new Intent(this, Courtyard.class);
+        startActivity(intent);
+
+    }
+
+    private void openWestfield(){
+        Intent intent = new Intent(this, Westfield.class);
+        startActivity(intent);
+
+    }
+
+    private void openTaylorCourt(){
+        Intent intent = new Intent(this, TaylorCourt.class);
+        startActivity(intent);
 
     }
     @Override
@@ -43,6 +91,57 @@ public class Accommodation extends AppCompatActivity {
             case R.id.item5:
             {
                 Intent intent = new Intent(this, CampusMap.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.subitem1:
+            {
+                Intent intent = new Intent(this, Courtyard.class);
+                startActivity(intent);
+                return true;
+            }case R.id.subitem2:
+            {
+                Intent intent = new Intent(this, Westfield.class);
+                startActivity(intent);
+                return true;
+            }case R.id.subitem3:
+            {
+                Intent intent = new Intent(this, TaylorCourt.class);
+                startActivity(intent);
+                return true;
+            }case R.id.subitem4:
+            {
+                Intent intent = new Intent(this, Monday.class);
+                startActivity(intent);
+                return true;
+            }case R.id.subitem5:
+            {
+                Intent intent = new Intent(this, Tuesday.class);
+                startActivity(intent);
+                return true;
+            }case R.id.subitem6:
+            {
+                Intent intent = new Intent(this, Wednesday.class);
+                startActivity(intent);
+                return true;
+            }case R.id.subitem7:
+            {
+                Intent intent = new Intent(this, Thursday.class);
+                startActivity(intent);
+                return true;
+            }case R.id.subitem8:
+            {
+                Intent intent = new Intent(this, Friday.class);
+                startActivity(intent);
+                return true;
+            }case R.id.subitem9:
+            {
+                Intent intent = new Intent(this, Saturday.class);
+                startActivity(intent);
+                return true;
+            }case R.id.subitem10:
+            {
+                Intent intent = new Intent(this, Sunday.class);
                 startActivity(intent);
                 return true;
             }

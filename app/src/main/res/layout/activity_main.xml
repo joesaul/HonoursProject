@@ -11,85 +11,70 @@
     <Button
         android:id="@+id/accommodation_button"
         style="@style/Widget.AppCompat.Button"
-        android:layout_width="188dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:text="@string/accommodation"
         app:layout_constraintEnd_toStartOf="@+id/activities_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        android:background="@drawable/button_background"/>
 
     <Button
         android:id="@+id/campusmap_button"
-        android:layout_width="384dp"
-        android:layout_height="165dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
         android:layout_marginBottom="32dp"
         android:text="@string/campusmap"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/uniofhullwebsite_button"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/button_background"/>
 
     <Button
         android:id="@+id/parking_button"
-        android:layout_width="188dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:layout_marginBottom="32dp"
         android:text="@string/parking"
-        app:layout_constraintBottom_toTopOf="@+id/campusmap_button"
+        app:layout_constraintBottom_toTopOf="@+id/uniofhullwebsite_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/schedule_button"
-        app:layout_constraintTop_toBottomOf="@+id/activities_button" />
+        app:layout_constraintTop_toBottomOf="@+id/activities_button"
+        android:background="@drawable/button_background"/>
 
     <Button
         android:id="@+id/schedule_button"
-        android:layout_width="188dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="32dp"
         android:text="@string/schedule"
         app:layout_constraintBottom_toTopOf="@+id/campusmap_button"
         app:layout_constraintEnd_toStartOf="@+id/parking_button"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/accommodation_button" />
+        app:layout_constraintTop_toBottomOf="@+id/accommodation_button"
+        android:background="@drawable/button_background"/>
 
     <Button
         android:id="@+id/activities_button"
-        android:layout_width="188dp"
-        android:layout_height="121dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
         android:text="@string/activties"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/accommodation_button"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:background="@drawable/button_background"/>
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="188dp"
-        android:layout_height="104dp"
+        android:layout_width="194dp"
+        android:layout_height="114dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="33dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:text="@string/homescreen"
@@ -102,7 +87,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="188dp"
-        android:layout_height="121dp"
+        android:layout_height="114dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="16dp"
@@ -112,4 +97,15 @@
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/universityofhulllogo" />
+
+    <Button
+        android:id="@+id/uniofhullwebsite_button"
+        android:layout_width="190dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/uniofhullwebsite"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/campusmap_button"
+        android:background="@drawable/button_background"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

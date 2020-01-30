@@ -3,6 +3,7 @@ package com.example.honoursproject_opendayapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -11,12 +12,12 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    public Button accommodation_button;
+    private Button accommodation_button;
     private Button activities_button;
     private Button schedule_button;
     private Button parking_button;
     private Button campusmap_button;
-    
+    private Button uniofhullwebsite_button;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -64,6 +65,15 @@ public class MainActivity extends AppCompatActivity {
                 openCampusMap();
             }
         });
+
+
+        uniofhullwebsite_button = findViewById(R.id.uniofhullwebsite_button);
+        uniofhullwebsite_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openURL();
+            }
+        });
     }
 
     private void openAccommodation(){
@@ -90,6 +100,16 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, CampusMap.class);
         startActivity(intent);
     }
+
+    public void openURL()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("http://hull.ac.uk"));
+        startActivity(openImplicitIntent);
+
+
+    }
+
 
 
 
