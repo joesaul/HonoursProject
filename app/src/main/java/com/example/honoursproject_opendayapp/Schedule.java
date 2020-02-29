@@ -7,15 +7,36 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class Schedule extends AppCompatActivity {
+
+    private Button computerscience;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_schedule);
 
+
+
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
+
+        computerscience = findViewById(R.id.computerscience);
+        computerscience.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openComputerscience();
+            }
+        } );
+
+    }
+
+
+    private void openComputerscience(){
+        Intent intent = new Intent(this, ComputerScience.class);
+        startActivity(intent);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

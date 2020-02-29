@@ -2,34 +2,48 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.honoursproject_opendayapp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/apptitle"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Sunday"
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+        <activity android:name=".ComputerScience"></activity>
+        <activity
+            android:name=".Sunday"
             android:label="@string/sunday"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Saturday"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Saturday"
             android:label="@string/saturday"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Friday"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Friday"
             android:label="@string/friday"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Thursday"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Thursday"
             android:label="@string/thursday"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Wednesday"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Wednesday"
             android:label="@string/wednesday"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Tuesday"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Tuesday"
             android:label="@string/tuesday"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Monday"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Monday"
             android:label="@string/monday"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".TaylorCourt"
             android:label="@string/taylorcourt"

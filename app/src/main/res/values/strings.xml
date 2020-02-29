@@ -18,4 +18,11 @@
     <string name="friday">Friday</string>
     <string name="saturday">Saturday</string>
     <string name="sunday">Sunday</string>
+    <string name="computerscience">Computer Science</string>
+    <string name="geography">Geography</string>
+    <string name="maths">Maths</string>
+    <string name="history">History</string>
+    <string name="criminology">Criminology</string>
+    <string name="chemistry">Chemistry</string>
+
 </resources>
