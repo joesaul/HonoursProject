@@ -7,23 +7,42 @@
     android:background="@android:color/background_light"
     tools:context=".Schedule">
 
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/universityofhulllogo" />
+
     <Button
         android:id="@+id/history"
-        android:layout_width="190dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="82dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:background="@drawable/button_background"
         android:text="@string/history"
         app:layout_constraintBottom_toTopOf="@+id/criminology"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/computerscience"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_text" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/geography"
-        android:layout_width="190dp"
-        android:layout_height="150dp"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/button_background"
         android:text="@string/geography"
@@ -35,9 +54,13 @@
 
     <Button
         android:id="@+id/criminology"
-        android:layout_width="190dp"
-        android:layout_height="150dp"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:background="@drawable/button_background"
         android:text="@string/criminology"
         app:layout_constraintBottom_toTopOf="@+id/maths"
@@ -47,22 +70,30 @@
 
     <Button
         android:id="@+id/computerscience"
-        android:layout_width="190dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
         android:background="@drawable/button_background"
-        android:onClick="openComputerscience"
         android:text="@string/computerscience"
         app:layout_constraintBottom_toTopOf="@+id/chemistry"
         app:layout_constraintEnd_toStartOf="@+id/history"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/schedule_text" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
     <Button
         android:id="@+id/chemistry"
-        android:layout_width="190dp"
-        android:layout_height="150dp"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
         android:background="@drawable/button_background"
         android:text="@string/chemistry"
         app:layout_constraintBottom_toTopOf="@+id/geography"
@@ -70,28 +101,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/computerscience" />
 
-    <TextView
-        android:id="@+id/schedule_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:gravity="center"
-        android:text="@string/schedule"
-        android:textColor="@color/colorPrimary"
-        android:textSize="65sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/maths"
-        android:layout_width="190dp"
-        android:layout_height="150dp"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:layout_marginBottom="32dp"
         android:background="@drawable/button_background"
         android:text="@string/maths"
@@ -99,8 +117,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/geography"
         app:layout_constraintTop_toBottomOf="@+id/criminology" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
