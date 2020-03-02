@@ -13,6 +13,11 @@ import android.widget.Button;
 public class Schedule extends AppCompatActivity {
 
     private Button computerscience;
+    private Button chemistry;
+    private Button criminology;
+    private Button geography;
+    private Button history;
+    private Button maths;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +36,71 @@ public class Schedule extends AppCompatActivity {
             }
         } );
 
+        chemistry = findViewById(R.id.chemistry);
+        chemistry.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openChemistry();
+            }
+        } );
+
+        criminology = findViewById(R.id.criminology);
+        criminology.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCriminology();
+            }
+        } );
+
+        geography = findViewById(R.id.geography);
+        geography.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openGeography();
+            }
+        } );
+
+        history = findViewById(R.id.history);
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHistory();
+            }
+        } );
+
+        maths = findViewById(R.id.maths);
+        maths.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMaths();
+            }
+        } );
+
     }
 
 
     private void openComputerscience(){
         Intent intent = new Intent(this, ComputerScience.class);
+        startActivity(intent);
+    }
+    private void openChemistry(){
+        Intent intent = new Intent(this, Chemistry.class);
+        startActivity(intent);
+    }
+    private void openCriminology(){
+        Intent intent = new Intent(this, Criminology.class);
+        startActivity(intent);
+    }
+    private void openGeography(){
+        Intent intent = new Intent(this, Geography.class);
+        startActivity(intent);
+    }
+    private void openHistory(){
+        Intent intent = new Intent(this, History.class);
+        startActivity(intent);
+    }
+    private void openMaths(){
+        Intent intent = new Intent(this, Maths.class);
         startActivity(intent);
     }
     @Override

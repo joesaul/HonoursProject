@@ -8,14 +8,14 @@
     android:paddingTop="16dp"
     android:paddingLeft="16dp"
     android:paddingRight="16dp"
-    tools:context=".ComputerScience">
+    tools:context=".Criminology">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="379dp"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/computerscience_timetable" />
+        android:text="@string/criminology_timetable" />
 
     <ListView
         android:id="@+id/listView"

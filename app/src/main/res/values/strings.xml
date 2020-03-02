@@ -25,5 +25,13 @@
     <string name="history">History</string>
     <string name="criminology">Criminology</string>
     <string name="chemistry">Chemistry</string>
+    <string name="computerscience_timetable">Computer Science - Open day timetable:</string>
+    <string name="chemistry_timetable">Chemistry - Open day timetable:</string>
+    <string name="criminology_timetable">Criminology - Open day timetable:</string>
+    <string name="geography_timetable">Geography - Open day timetable:</string>
+    <string name="history_timetable">History - Open day timetable:</string>
+    <string name="maths_timetable">Maths - Open day timetable:</string>
+
+
 
 </resources>

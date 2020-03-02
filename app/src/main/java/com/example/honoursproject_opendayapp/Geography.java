@@ -23,7 +23,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URI;
 
-public class ComputerScience extends AppCompatActivity {
+public class Geography extends AppCompatActivity {
 
     ListView listView;
     ArrayAdapter<String> adapter;
@@ -31,7 +31,7 @@ public class ComputerScience extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_computer_science);
+        setContentView(R.layout.activity_geography);
 
 
         listView = (ListView)findViewById(R.id.listView);
@@ -47,7 +47,7 @@ public class ComputerScience extends AppCompatActivity {
         protected String doInBackground(String... params) {
             String result = "";
 
-            String host = "http://150.237.94.38:8081/computerscience.php";
+            String host = "http://150.237.94.38:8081/geography.php";
             try{
                 HttpClient client = new DefaultHttpClient();
                 HttpGet request = new HttpGet();
@@ -79,15 +79,15 @@ public class ComputerScience extends AppCompatActivity {
                 JSONObject jsonResult = new JSONObject(result);
                 int success = jsonResult.getInt("success");
                 if(success == 1){
-                    JSONArray computerscience = jsonResult.getJSONArray("computerscience");
-                    for(int i =0; i < computerscience.length(); i++){
-                        JSONObject computer_science = computerscience.getJSONObject(i);
-                        int id = computer_science.getInt("id");
-                        String starttime = computer_science.getString("Start Time");
-                        String finishtime = computer_science.getString("Finish Time");
-                        String building = computer_science.getString("Building");
-                        String room = computer_science.getString("Room");
-                        String description = computer_science.getString("Description");
+                    JSONArray geography = jsonResult.getJSONArray("geography");
+                    for(int i =0; i < geography.length(); i++){
+                        JSONObject geography_ = geography.getJSONObject(i);
+                        int id = geography_.getInt("id");
+                        String starttime = geography_.getString("Start Time");
+                        String finishtime = geography_.getString("Finish Time");
+                        String building = geography_.getString("Building");
+                        String room = geography_.getString("Room");
+                        String description = geography_.getString("Description");
                         String line =  starttime + " - " + finishtime + " | " + building + " - " + room + " | " + description;
                         adapter.add(line);
                     }
