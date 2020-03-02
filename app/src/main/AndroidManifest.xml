@@ -7,13 +7,21 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/universityofhulllogo"
         android:label="@string/apptitle"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/universityofhulllogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".History"></activity>
+        <activity android:name=".SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".History" />
         <activity android:name=".Geography" />
         <activity android:name=".Maths" />
         <activity android:name=".Criminology" />
@@ -87,11 +95,7 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

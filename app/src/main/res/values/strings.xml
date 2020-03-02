@@ -31,7 +31,16 @@
     <string name="geography_timetable">Geography - Open day timetable:</string>
     <string name="history_timetable">History - Open day timetable:</string>
     <string name="maths_timetable">Maths - Open day timetable:</string>
-
+    <string name="spinnerhint">Please select a Timetable</string>
+    <string name="select_timetable">Select a Timetable for the open day you are attending:</string>
+    <string-array name="timetables">
+        <item>Chemistry</item>
+        <item>Computer Science</item>
+        <item>Criminology</item>
+        <item>Geography</item>
+        <item>History</item>
+        <item>Maths</item>
+    </string-array>
 
 
 </resources>

@@ -8,7 +8,11 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 public class Schedule extends AppCompatActivity {
 
@@ -25,10 +29,46 @@ public class Schedule extends AppCompatActivity {
         setContentView(R.layout.activity_my_schedule);
 
 
-
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
 
-        computerscience = findViewById(R.id.computerscience);
+        Spinner mySpinner = (Spinner) findViewById(R.id.timetables_spinner);
+
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(Schedule.this,
+                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.timetables));
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        mySpinner.setAdapter(myAdapter);
+
+        mySpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
+                if (i == 1) {
+                    startActivity(new Intent(Schedule.this, Chemistry.class));
+                } else if (i == 2) {
+                    startActivity(new Intent(Schedule.this, ComputerScience.class));
+                } else if (i == 3) {
+                    startActivity(new Intent(Schedule.this, Criminology.class));
+                } else if (i == 4) {
+                    startActivity(new Intent(Schedule.this, Geography.class));
+                } else if (i == 5) {
+                    startActivity(new Intent(Schedule.this, History.class));
+                } else if (i == 6) {
+                    startActivity(new Intent(Schedule.this, Maths.class));
+                }
+            }
+
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+
+
+
+
+        /*//computerscience = findViewById(R.id.computerscience);
         computerscience.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,7 +76,7 @@ public class Schedule extends AppCompatActivity {
             }
         } );
 
-        chemistry = findViewById(R.id.chemistry);
+        //chemistry = findViewById(R.id.chemistry);
         chemistry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +84,7 @@ public class Schedule extends AppCompatActivity {
             }
         } );
 
-        criminology = findViewById(R.id.criminology);
+        //criminology = findViewById(R.id.criminology);
         criminology.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,7 +92,7 @@ public class Schedule extends AppCompatActivity {
             }
         } );
 
-        geography = findViewById(R.id.geography);
+        //geography = findViewById(R.id.geography);
         geography.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +100,7 @@ public class Schedule extends AppCompatActivity {
             }
         } );
 
-        history = findViewById(R.id.history);
+        //history = findViewById(R.id.history);
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +108,7 @@ public class Schedule extends AppCompatActivity {
             }
         } );
 
-        maths = findViewById(R.id.maths);
+        //maths = findViewById(R.id.maths);
         maths.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,9 +117,9 @@ public class Schedule extends AppCompatActivity {
         } );
 
     }
+*/
 
-
-    private void openComputerscience(){
+    /*private void openComputerscience(){
         Intent intent = new Intent(this, ComputerScience.class);
         startActivity(intent);
     }
@@ -103,86 +143,87 @@ public class Schedule extends AppCompatActivity {
         Intent intent = new Intent(this, Maths.class);
         startActivity(intent);
     }
+
+     */
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.dropdown_menu, menu);
         return true;
     }
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.item3:
-            {
-                Intent intent = new Intent(this, Parking.class);
-                startActivity(intent);
-                return true;
+
+        @Override
+        public boolean onOptionsItemSelected (MenuItem item){
+            switch (item.getItemId()) {
+                case R.id.item3: {
+                    Intent intent = new Intent(this, Parking.class);
+                    startActivity(intent);
+                    return true;
+                }
+                case R.id.item4: {
+                    Intent intent = new Intent(this, Schedule.class);
+                    startActivity(intent);
+                    return true;
+                }
+                case R.id.item5: {
+                    Intent intent = new Intent(this, CampusMap.class);
+                    startActivity(intent);
+                    return true;
+                }
+                case R.id.subitem1: {
+                    Intent intent = new Intent(this, Courtyard.class);
+                    startActivity(intent);
+                    return true;
+                }
+                case R.id.subitem2: {
+                    Intent intent = new Intent(this, Westfield.class);
+                    startActivity(intent);
+                    return true;
+                }
+                case R.id.subitem3: {
+                    Intent intent = new Intent(this, TaylorCourt.class);
+                    startActivity(intent);
+                    return true;
+                }
+                case R.id.subitem4: {
+                    Intent intent = new Intent(this, Monday.class);
+                    startActivity(intent);
+                    return true;
+                }
+                case R.id.subitem5: {
+                    Intent intent = new Intent(this, Tuesday.class);
+                    startActivity(intent);
+                    return true;
+                }
+                case R.id.subitem6: {
+                    Intent intent = new Intent(this, Wednesday.class);
+                    startActivity(intent);
+                    return true;
+                }
+                case R.id.subitem7: {
+                    Intent intent = new Intent(this, Thursday.class);
+                    startActivity(intent);
+                    return true;
+                }
+                case R.id.subitem8: {
+                    Intent intent = new Intent(this, Friday.class);
+                    startActivity(intent);
+                    return true;
+                }
+                case R.id.subitem9: {
+                    Intent intent = new Intent(this, Saturday.class);
+                    startActivity(intent);
+                    return true;
+                }
+                case R.id.subitem10: {
+                    Intent intent = new Intent(this, Sunday.class);
+                    startActivity(intent);
+                    return true;
+                }
+                default:
+                    return super.onOptionsItemSelected(item);
             }
-            case R.id.item4:
-            {
-                Intent intent = new Intent(this, Schedule.class);
-                startActivity(intent);
-                return true;
-            }
-            case R.id.item5:
-            {
-                Intent intent = new Intent(this, CampusMap.class);
-                startActivity(intent);
-                return true;
-            }
-            case R.id.subitem1:
-            {
-                Intent intent = new Intent(this, Courtyard.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem2:
-            {
-                Intent intent = new Intent(this, Westfield.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem3:
-            {
-                Intent intent = new Intent(this, TaylorCourt.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem4:
-            {
-                Intent intent = new Intent(this, Monday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem5:
-            {
-                Intent intent = new Intent(this, Tuesday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem6:
-            {
-                Intent intent = new Intent(this, Wednesday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem7:
-            {
-                Intent intent = new Intent(this, Thursday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem8:
-            {
-                Intent intent = new Intent(this, Friday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem9:
-            {
-                Intent intent = new Intent(this, Saturday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem10:
-            {
-                Intent intent = new Intent(this, Sunday.class);
-                startActivity(intent);
-                return true;
-            }
-            default:
-                return super.onOptionsItemSelected(item);
         }
     }
-}
+
