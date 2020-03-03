@@ -7,9 +7,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/universityofhulllogo"
+        android:icon="@drawable/projectsplashscreen"
         android:label="@string/apptitle"
-        android:roundIcon="@drawable/universityofhulllogo"
+        android:roundIcon="@drawable/projectsplashscreen"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
