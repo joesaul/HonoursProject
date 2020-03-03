@@ -32,12 +32,7 @@ public class Parking extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             }
-            case R.id.item4:
-            {
-                Intent intent = new Intent(this, Schedule.class);
-                startActivity(intent);
-                return true;
-            }
+
             case R.id.item5:
             {
                 Intent intent = new Intent(this, CampusMap.class);
@@ -95,6 +90,43 @@ public class Parking extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             }
+            case R.id.subitem11:
+            {
+                Intent intent = new Intent(this, Chemistry.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.subitem12:
+            {
+                Intent intent = new Intent(this, ComputerScience.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.subitem13:
+            {
+                Intent intent = new Intent(this, Criminology.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.subitem14:
+            {
+                Intent intent = new Intent(this, Geography.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.subitem15:
+            {
+                Intent intent = new Intent(this, History.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.subitem16:
+            {
+                Intent intent = new Intent(this, Maths.class);
+                startActivity(intent);
+                return true;
+            }
+
             default:
                 return super.onOptionsItemSelected(item);
         }

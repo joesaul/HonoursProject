@@ -21,17 +21,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".History" />
-        <activity android:name=".Geography" />
-        <activity android:name=".Maths" />
-        <activity android:name=".Criminology" />
-        <activity android:name=".Chemistry" />
+        <activity android:name=".History"
+            android:label="@string/history"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Geography"
+            android:label="@string/geography"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Maths"
+            android:label="@string/maths"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Criminology"
+            android:label="@string/criminology"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Chemistry"
+            android:label="@string/chemistry"
+            android:parentActivityName=".MainActivity"/>
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-        <activity android:name=".ComputerScience" />
+        <activity android:name=".ComputerScience"
+            android:label="@string/computerscience"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".Sunday"
             android:label="@string/sunday"

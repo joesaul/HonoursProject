@@ -38,7 +38,22 @@
         android:title="Parking"/>
 
     <item android:id="@+id/item4"
-        android:title="My Schedule"/>
+        android:title="My Schedule">
+        <menu>
+            <item android:id="@+id/subitem11"
+                android:title="Chemistry"/>
+            <item android:id="@+id/subitem12"
+                android:title="Computer Science"/>
+            <item android:id="@+id/subitem13"
+                android:title="Criminology"/>
+            <item android:id="@+id/subitem14"
+                android:title="Geography"/>
+            <item android:id="@+id/subitem15"
+                android:title="History"/>
+            <item android:id="@+id/subitem16"
+                android:title="Maths"/>
+        </menu>
+    </item>
 
     <item android:id="@+id/item5"
         android:title="Campus Map"/>

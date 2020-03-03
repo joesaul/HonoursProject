@@ -7,6 +7,7 @@
     android:paddingBottom="16dp"
     android:paddingTop="16dp"
     android:paddingLeft="16dp"
+    android:background="@android:color/background_light"
     android:paddingRight="16dp"
     tools:context=".ComputerScience">
 
