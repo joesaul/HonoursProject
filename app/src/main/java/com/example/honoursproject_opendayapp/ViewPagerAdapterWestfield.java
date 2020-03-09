@@ -10,13 +10,13 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-public class ViewPagerAdapterTaylorCourt extends PagerAdapter {
+public class ViewPagerAdapterWestfield extends PagerAdapter {
 
     private Context context;
     private LayoutInflater layoutInflater;
-    private Integer[] images = {R.drawable.taylorcourtimage1, R.drawable.taylorcourtimage2, R.drawable.taylorcourtimage3, R.drawable.taylorcourtimage4, R.drawable.taylorcourtimage5};
+    private Integer[] images = {R.drawable.westfieldimage1, R.drawable.westfieldimage2, R.drawable.westfieldimage3, R.drawable.westfieldimage4, R.drawable.westfieldimage5, R.drawable.westfieldimage6, R.drawable.westfieldimage7};
 
-    public ViewPagerAdapterTaylorCourt(Context context) {
+    public ViewPagerAdapterWestfield(Context context) {
         this.context = context;
     }
 
@@ -34,9 +34,9 @@ public class ViewPagerAdapterTaylorCourt extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.image_slider_taylor_court, null);
-        ImageView imageView14 = (ImageView)view.findViewById(R.id.imageView14);
-        imageView14.setImageResource(images[position]);
+        View view = layoutInflater.inflate(R.layout.image_slider_westfield, null);
+        ImageView imageView15 = (ImageView)view.findViewById(R.id.imageView15);
+        imageView15.setImageResource(images[position]);
 
         ViewPager vp = (ViewPager) container;
         vp.addView(view, 0);

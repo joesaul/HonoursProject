@@ -7,8 +7,13 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class Westfield extends AppCompatActivity {
+
+    private Button westfieldgallery_button;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +21,19 @@ public class Westfield extends AppCompatActivity {
         setContentView(R.layout.activity_westfield);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
+
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
+        westfieldgallery_button = findViewById(R.id.westfieldgallery_button);
+        westfieldgallery_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openWestfieldGallery();
+            }
+        });
+    }
+    private void openWestfieldGallery(){
+        Intent intent = new Intent(this, WestfieldGallery.class);
+        startActivity(intent);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

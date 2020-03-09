@@ -15,8 +15,8 @@ public class TaylorCourtGallery extends AppCompatActivity {
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
 
-        taylorcourtgallery = (ViewPager)findViewById(R.id.courtyardgallery);
-        ViewPagerAdapterCourtyard viewPagerAdapter = new ViewPagerAdapterCourtyard(this);
+        taylorcourtgallery = (ViewPager)findViewById(R.id.taylorcourtgallery);
+        ViewPagerAdapterTaylorCourt viewPagerAdapter = new ViewPagerAdapterTaylorCourt(this);
         taylorcourtgallery.setAdapter(viewPagerAdapter);
     }
 }
