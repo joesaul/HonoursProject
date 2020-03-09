@@ -28,7 +28,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:gravity="center"
-        android:text="Slide right or left to scroll through gallery"
+        android:text="Swipe through the gallery"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"

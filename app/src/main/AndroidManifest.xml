@@ -13,14 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".WestfieldGallery"></activity>
+        <activity android:name=".WestfieldGallery"
+            android:label="Westfield Gallery"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".TaylorCourtGallery"
-            android:label="Taylor Court Photo Gallery"
+            android:label="Taylor Court Gallery"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".CourtyardGallery"
-            android:label="Courtyard Photo Gallery"
+            android:label="Courtyard Gallery"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".SplashScreen"

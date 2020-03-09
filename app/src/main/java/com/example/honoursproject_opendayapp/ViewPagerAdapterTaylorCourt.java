@@ -14,7 +14,7 @@ public class ViewPagerAdapterTaylorCourt extends PagerAdapter {
 
     private Context context;
     private LayoutInflater layoutInflater;
-    private Integer[] images = {R.drawable.taylorcourtimage1, R.drawable.taylorcourtimage2, R.drawable.taylorcourtimage3, R.drawable.taylorcourtimage4, R.drawable.taylorcourtimage5};
+    private Integer[] images = {R.drawable.taylorcourtimage1, R.drawable.taylorcourtimage2, R.drawable.taylorcourtimage3, R.drawable.taylorcourtimage4, R.drawable.taylorcourtimage5, R.drawable.taylorcourtimage6, R.drawable.taylorcourtimage7};
 
     public ViewPagerAdapterTaylorCourt(Context context) {
         this.context = context;
