@@ -5,18 +5,18 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
-public class CourtyardGallery extends AppCompatActivity {
-    ViewPager courtyardgallery;
+public class TaylorCourtGallery extends AppCompatActivity {
+    ViewPager taylorcourtgallery;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_courtyard_gallery);
+        setContentView(R.layout.activity_taylor_court_gallery);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
 
-        courtyardgallery = (ViewPager)findViewById(R.id.courtyardgallery);
+        taylorcourtgallery = (ViewPager)findViewById(R.id.courtyardgallery);
         ViewPagerAdapterCourtyard viewPagerAdapter = new ViewPagerAdapterCourtyard(this);
-        courtyardgallery.setAdapter(viewPagerAdapter);
+        taylorcourtgallery.setAdapter(viewPagerAdapter);
     }
 }

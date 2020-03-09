@@ -7,8 +7,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class TaylorCourt extends AppCompatActivity {
+
+    private Button taylorcourtgallery_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +20,18 @@ public class TaylorCourt extends AppCompatActivity {
         setContentView(R.layout.activity_taylor_court);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
+        taylorcourtgallery_button = findViewById(R.id.taylorcourtgallery_button);
+        taylorcourtgallery_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTaylorCourtGallery();
+            }
+        });
+    }
+
+    private void openTaylorCourtGallery(){
+        Intent intent = new Intent(this, TaylorCourtGallery.class);
+        startActivity(intent);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
