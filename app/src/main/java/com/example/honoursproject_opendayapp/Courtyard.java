@@ -7,8 +7,12 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class Courtyard extends AppCompatActivity {
+
+    private Button courtyardgallery_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +20,19 @@ public class Courtyard extends AppCompatActivity {
         setContentView(R.layout.activity_courtyard);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
+
+        courtyardgallery_button = findViewById(R.id.courtyardgallery_button);
+        courtyardgallery_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openCourtyardGallery();
+            }
+        });
+    }
+
+    private void openCourtyardGallery(){
+        Intent intent = new Intent(this, CourtyardGallery.class);
+        startActivity(intent);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

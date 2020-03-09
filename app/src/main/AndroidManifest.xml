@@ -13,7 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".SplashScreen"
+        <activity
+            android:name=".CourtyardGallery"
+            android:label="Courtyard Photo Gallery"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SplashScreen"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,29 +26,35 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".History"
+        <activity
+            android:name=".History"
             android:label="@string/history"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Geography"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Geography"
             android:label="@string/geography"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Maths"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Maths"
             android:label="@string/maths"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Criminology"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Criminology"
             android:label="@string/criminology"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Chemistry"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Chemistry"
             android:label="@string/chemistry"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
 
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-        <activity android:name=".ComputerScience"
+        <activity
+            android:name=".ComputerScience"
             android:label="@string/computerscience"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Sunday"
             android:label="@string/sunday"
@@ -106,9 +117,7 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

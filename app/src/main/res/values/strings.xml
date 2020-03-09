@@ -42,6 +42,7 @@
         <item>History</item>
         <item>Maths</item>
     </string-array>
+    <string name="courtyard_gallery">Photo Gallery</string>
 
 
 </resources>
