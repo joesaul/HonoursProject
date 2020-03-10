@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 public class CampusMap extends AppCompatActivity {
     private Button Map_button;
 
@@ -27,6 +29,11 @@ public class CampusMap extends AppCompatActivity {
                 openMaps();
             }
         });
+
+        PhotoView photoView = (PhotoView)findViewById(R.id.campusmap);
+        photoView.setImageResource(R.drawable.campusmap);
+
+
     }
     private void openMaps(){
         Intent intent = new Intent(this, MapActivity.class);

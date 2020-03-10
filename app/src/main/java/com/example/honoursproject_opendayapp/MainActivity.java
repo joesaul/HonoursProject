@@ -19,15 +19,20 @@ public class MainActivity extends AppCompatActivity {
     private Button parking_button;
     private Button campusmap_button;
     private Button uniofhullwebsite_button;
+    private Button liveMap_button;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-
+        liveMap_button = findViewById(R.id.liveMap_button);
+        liveMap_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMaps();
+            }
+        });
 
         accommodation_button = findViewById(R.id.accommodation_button);
         accommodation_button.setOnClickListener(new View.OnClickListener() {
@@ -111,6 +116,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(openImplicitIntent);
 
 
+    }
+    private void openMaps(){
+        Intent intent = new Intent(this, MapActivity.class);
+        startActivity(intent);
     }
 
 
