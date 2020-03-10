@@ -43,6 +43,7 @@
         <item>Maths</item>
     </string-array>
     <string name="courtyard_gallery">Photo Gallery</string>
+    <string name="Googlemap">Live Map</string>
 
 
 </resources>

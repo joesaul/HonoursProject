@@ -89,6 +89,12 @@ public class Accommodation extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             }
+            case R.id.item6:
+            {
+                Intent intent = new Intent(this, MapActivity.class);
+                startActivity(intent);
+                return true;
+            }
             case R.id.subitem1:
             {
                 Intent intent = new Intent(this, Courtyard.class);

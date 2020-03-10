@@ -59,6 +59,12 @@ public class Criminology extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             }
+            case R.id.item6:
+            {
+                Intent intent = new Intent(this, MapActivity.class);
+                startActivity(intent);
+                return true;
+            }
 
             case R.id.item5:
             {

@@ -65,87 +65,6 @@ public class Schedule extends AppCompatActivity {
 
     }
 
-
-
-
-        /*//computerscience = findViewById(R.id.computerscience);
-        computerscience.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openComputerscience();
-            }
-        } );
-
-        //chemistry = findViewById(R.id.chemistry);
-        chemistry.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openChemistry();
-            }
-        } );
-
-        //criminology = findViewById(R.id.criminology);
-        criminology.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openCriminology();
-            }
-        } );
-
-        //geography = findViewById(R.id.geography);
-        geography.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openGeography();
-            }
-        } );
-
-        //history = findViewById(R.id.history);
-        history.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openHistory();
-            }
-        } );
-
-        //maths = findViewById(R.id.maths);
-        maths.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openMaths();
-            }
-        } );
-
-    }
-*/
-
-    /*private void openComputerscience(){
-        Intent intent = new Intent(this, ComputerScience.class);
-        startActivity(intent);
-    }
-    private void openChemistry(){
-        Intent intent = new Intent(this, Chemistry.class);
-        startActivity(intent);
-    }
-    private void openCriminology(){
-        Intent intent = new Intent(this, Criminology.class);
-        startActivity(intent);
-    }
-    private void openGeography(){
-        Intent intent = new Intent(this, Geography.class);
-        startActivity(intent);
-    }
-    private void openHistory(){
-        Intent intent = new Intent(this, History.class);
-        startActivity(intent);
-    }
-    private void openMaths(){
-        Intent intent = new Intent(this, Maths.class);
-        startActivity(intent);
-    }
-
-     */
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
@@ -158,6 +77,12 @@ public class Schedule extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.item3: {
                     Intent intent = new Intent(this, Parking.class);
+                    startActivity(intent);
+                    return true;
+                }
+                case R.id.item6:
+                {
+                    Intent intent = new Intent(this, MapActivity.class);
                     startActivity(intent);
                     return true;
                 }

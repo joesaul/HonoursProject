@@ -7,8 +7,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class CampusMap extends AppCompatActivity {
+    private Button Map_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +19,19 @@ public class CampusMap extends AppCompatActivity {
         setContentView(R.layout.activity_campus_map);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
+
+        Map_button = findViewById(R.id.Map_button);
+        Map_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMaps();
+            }
+        });
+    }
+    private void openMaps(){
+        Intent intent = new Intent(this, MapActivity.class);
+        startActivity(intent);
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -29,6 +45,12 @@ public class CampusMap extends AppCompatActivity {
             case R.id.item3:
             {
                 Intent intent = new Intent(this, Parking.class);
+                startActivity(intent);
+                return true;
+            }
+            case R.id.item6:
+            {
+                Intent intent = new Intent(this, MapActivity.class);
                 startActivity(intent);
                 return true;
             }

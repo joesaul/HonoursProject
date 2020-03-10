@@ -153,6 +153,12 @@ public class Chemistry extends AppCompatActivity {
                 startActivity(intent);
                 return true;
             }
+            case R.id.item6:
+            {
+                Intent intent = new Intent(this, MapActivity.class);
+                startActivity(intent);
+                return true;
+            }
 
             default:
                 return super.onOptionsItemSelected(item);
