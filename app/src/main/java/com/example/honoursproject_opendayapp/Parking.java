@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
+import com.github.chrisbanes.photoview.PhotoView;
+
 public class Parking extends AppCompatActivity {
 
     @Override
@@ -16,6 +18,9 @@ public class Parking extends AppCompatActivity {
         setContentView(R.layout.activity_parking);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
+
+        PhotoView photoView = (PhotoView)findViewById(R.id.parkingmap);
+        photoView.setImageResource(R.drawable.parking);
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){

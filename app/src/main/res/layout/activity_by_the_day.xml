@@ -1,12 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
     tools:context=".ByTheDay">
 
 
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="101dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/universityofhulllogo" />
 
+    <ImageView
+        android:id="@+id/studentunionimage"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/kcomimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bytheday_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/studentunion" />
+
+    <ImageView
+        android:id="@+id/kcomimage"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/piperimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bytheday_text"
+        app:layout_constraintTop_toBottomOf="@+id/studentunionimage"
+        app:srcCompat="@drawable/kcomstadium" />
+
+    <ImageView
+        android:id="@+id/piperimage"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/atikimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bytheday_text"
+        app:layout_constraintTop_toBottomOf="@+id/kcomimage"
+        app:srcCompat="@drawable/thepiper" />
+
+    <TextView
+        android:id="@+id/bytheday_text"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Mondays: \nThe piper nightclub's busiest night of the week is a monday. Drinks a £1 and it is a very popular place for students to go and enjoy their monday nights. \n \nTuesdays: \nTuesday night is quiz night. Take your pick out of either the Gardeners Arms pub quiz or the Hull University Union pub quiz. Both are very popular and enjoyable. Hull City Football Club also occasionally play their matches on a tuesday evening, so if you are into sport that is another option.\n \nWednesdays:\n Wednesdays are the busiest night of the week for the union as they host their weekly nightout in the asylum university nightclub 'Asylum'. This is very popular amongst students with the weekly event attracting hundreds of students each week. If you are interested in joining a society or sports team, then social gatherings for the teams take place on a wednesday and the sports teams play their matches on a wednesday.\n\nThursdays:\nThursday is karaoke night in the university union, another very enjoyable evening with plenty of people showing up and taking part. The Welly club's most popular night is a thursday where they offer cheap drinks.\n\nFridays:\nAtik nightclub student night is on a friday, as they offer free entry to students before midnight with cheap drinks all night too.\n\nSaturdays:\n The Hull City Football Club play most of their home matches on a saturday so this is an option for sport lovers, with lots of the Hull community in attendance as well. All nightclubs are open on a saturday so take your pick out of the nightclubs you have been to during the week.\n\nSundays: Sundays are a bit of a slower day with not as much going on. You can take this time to spend time with your housemates or go to one of the tourist attractions in Hull. The Hull rugby teams do sometimes play on a sunday as well. "
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView18" />
+
+    <ImageView
+        android:id="@+id/atikimage"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/karaokeimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bytheday_text"
+        app:layout_constraintTop_toBottomOf="@+id/piperimage"
+        app:srcCompat="@drawable/atik" />
+
+    <ImageView
+        android:id="@+id/karaokeimage"
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bytheday_text"
+        app:layout_constraintTop_toBottomOf="@+id/atikimage"
+        app:srcCompat="@drawable/karaoke" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
