@@ -8,12 +8,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-public class Friday extends AppCompatActivity {
+public class ByTheDay extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_friday);
+        setContentView(R.layout.activity_by_the_day);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
     }
@@ -62,37 +62,12 @@ public class Friday extends AppCompatActivity {
                 return true;
             }case R.id.subitem4:
             {
-                Intent intent = new Intent(this, Monday.class);
+                Intent intent = new Intent(this, ByTheDay.class);
                 startActivity(intent);
                 return true;
             }case R.id.subitem5:
             {
-                Intent intent = new Intent(this, Tuesday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem6:
-            {
-                Intent intent = new Intent(this, Wednesday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem7:
-            {
-                Intent intent = new Intent(this, Thursday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem8:
-            {
-                Intent intent = new Intent(this, Friday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem9:
-            {
-                Intent intent = new Intent(this, Saturday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem10:
-            {
-                Intent intent = new Intent(this, Sunday.class);
+                Intent intent = new Intent(this, TouristAttractions.class);
                 startActivity(intent);
                 return true;
             }

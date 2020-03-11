@@ -12,13 +12,8 @@
     <string name="westfield">Westfield</string>
     <string name="taylorcourt">Taylor Court</string>
     <string name="apptitle">Hull OpenDay</string>
-    <string name="monday">Monday</string>
-    <string name="tuesday">Tuesday</string>
-    <string name="wednesday">Wednesday</string>
-    <string name="thursday">Thursday</string>
-    <string name="friday">Friday</string>
-    <string name="saturday">Saturday</string>
-    <string name="sunday">Sunday</string>
+    <string name="bytheday">Activities On Each Day</string>
+    <string name="touristattractions">Tourist Attractions</string>
     <string name="computerscience">Computer Science</string>
     <string name="geography">Geography</string>
     <string name="maths">Maths</string>

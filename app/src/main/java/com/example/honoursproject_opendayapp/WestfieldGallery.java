@@ -68,37 +68,12 @@ public class WestfieldGallery extends AppCompatActivity {
                 return true;
             }case R.id.subitem4:
             {
-                Intent intent = new Intent(this, Monday.class);
+                Intent intent = new Intent(this, ByTheDay.class);
                 startActivity(intent);
                 return true;
             }case R.id.subitem5:
             {
-                Intent intent = new Intent(this, Tuesday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem6:
-            {
-                Intent intent = new Intent(this, Wednesday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem7:
-            {
-                Intent intent = new Intent(this, Thursday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem8:
-            {
-                Intent intent = new Intent(this, Friday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem9:
-            {
-                Intent intent = new Intent(this, Saturday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem10:
-            {
-                Intent intent = new Intent(this, Sunday.class);
+                Intent intent = new Intent(this, TouristAttractions.class);
                 startActivity(intent);
                 return true;
             }

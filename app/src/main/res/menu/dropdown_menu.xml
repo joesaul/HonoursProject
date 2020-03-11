@@ -18,19 +18,10 @@
         android:title="Things to do in Hull">
         <menu>
             <item android:id="@+id/subitem4"
-                android:title="Monday"/>
+                android:title="@string/bytheday"/>
             <item android:id="@+id/subitem5"
-                android:title="Tuesday"/>
-            <item android:id="@+id/subitem6"
-                android:title="Wednesday"/>
-            <item android:id="@+id/subitem7"
-                android:title="Thursday"/>
-            <item android:id="@+id/subitem8"
-                android:title="Friday"/>
-            <item android:id="@+id/subitem9"
-                android:title="Saturday"/>
-            <item android:id="@+id/subitem10"
-                android:title="Sunday"/>
+                android:title="Tourist Attractions"/>
+
         </menu>
     </item>
 

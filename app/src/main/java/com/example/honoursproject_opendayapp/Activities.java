@@ -12,13 +12,8 @@ import android.widget.Button;
 
 public class Activities extends AppCompatActivity {
 
-    private Button monday_button;
-    private Button tuesday_button;
-    private Button wednesday_button;
-    private Button thursday_button;
-    private Button friday_button;
-    private Button saturday_button;
-    private Button sunday_button;
+    private Button bytheday_button;
+    private Button touristattraction_button;
 
 
     @Override
@@ -28,99 +23,37 @@ public class Activities extends AppCompatActivity {
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
 
-        monday_button = findViewById(R.id.monday_button);
-        monday_button.setOnClickListener(new View.OnClickListener() {
+        bytheday_button = findViewById(R.id.bytheday_button);
+        bytheday_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openMonday();
+                openByTheDay();
             }
         });
 
-        tuesday_button = findViewById(R.id.tuesday_button);
-        tuesday_button.setOnClickListener(new View.OnClickListener() {
+        touristattraction_button = findViewById(R.id.touristattraction_button);
+        touristattraction_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openTuesday();
-            }
-        });
-
-        wednesday_button = findViewById(R.id.wednesday_button);
-        wednesday_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openWednesday();
-            }
-        });
-
-        thursday_button = findViewById(R.id.thursday_button);
-        thursday_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openThursday();
-            }
-        });
-
-        friday_button = findViewById(R.id.friday_button);
-        friday_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openFriday();
-            }
-        });
-
-        saturday_button = findViewById(R.id.saturday_button);
-        saturday_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSaturday();
-            }
-        });
-
-        sunday_button = findViewById(R.id.sunday_button);
-        sunday_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSunday();
+                openTouristAttractions();
             }
         });
 
 
+
     }
 
-    private void openMonday(){
-        Intent intent = new Intent(this, Monday.class);
+    private void openByTheDay(){
+        Intent intent = new Intent(this, ByTheDay.class);
         startActivity(intent);
     }
 
-    private void openTuesday(){
-        Intent intent = new Intent(this, Tuesday.class);
+    private void openTouristAttractions(){
+        Intent intent = new Intent(this, TouristAttractions.class);
         startActivity(intent);
     }
 
-    private void openWednesday(){
-        Intent intent = new Intent(this, Wednesday.class);
-        startActivity(intent);
-    }
 
-    private void openThursday(){
-        Intent intent = new Intent(this, Thursday.class);
-        startActivity(intent);
-    }
-
-    private void openFriday(){
-        Intent intent = new Intent(this, Friday.class);
-        startActivity(intent);
-    }
-
-    private void openSaturday(){
-        Intent intent = new Intent(this, Saturday.class);
-        startActivity(intent);
-    }
-
-    private void openSunday(){
-        Intent intent = new Intent(this, Sunday.class);
-        startActivity(intent);
-    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
@@ -166,37 +99,11 @@ public class Activities extends AppCompatActivity {
                 return true;
             }case R.id.subitem4:
             {
-                Intent intent = new Intent(this, Monday.class);
+                Intent intent = new Intent(this, ByTheDay.class);
                 startActivity(intent);
                 return true;
-            }case R.id.subitem5:
-            {
-                Intent intent = new Intent(this, Tuesday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem6:
-            {
-                Intent intent = new Intent(this, Wednesday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem7:
-            {
-                Intent intent = new Intent(this, Thursday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem8:
-            {
-                Intent intent = new Intent(this, Friday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem9:
-            {
-                Intent intent = new Intent(this, Saturday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem10:
-            {
-                Intent intent = new Intent(this, Sunday.class);
+            }case R.id.subitem5: {
+                Intent intent = new Intent(this, TouristAttractions.class);
                 startActivity(intent);
                 return true;
             }

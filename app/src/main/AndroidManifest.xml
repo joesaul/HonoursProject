@@ -79,32 +79,12 @@
             android:label="@string/computerscience"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".Sunday"
-            android:label="@string/sunday"
+            android:name=".TouristAttractions"
+            android:label="@string/touristattractions"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".Saturday"
-            android:label="@string/saturday"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Friday"
-            android:label="@string/friday"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Thursday"
-            android:label="@string/thursday"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Wednesday"
-            android:label="@string/wednesday"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Tuesday"
-            android:label="@string/tuesday"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".Monday"
-            android:label="@string/monday"
+            android:name=".ByTheDay"
+            android:label="@string/bytheday"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".TaylorCourt"

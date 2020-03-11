@@ -30,6 +30,7 @@ public class Criminology extends AppCompatActivity {
 
     ListView listView;
     ArrayAdapter<String> adapter;
+    private Button Map_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +38,24 @@ public class Criminology extends AppCompatActivity {
         setContentView(R.layout.activity_criminology);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
 
+        Map_button = findViewById(R.id.Map_button);
+        Map_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMaps();
+            }
+        });
+
 
         listView = (ListView)findViewById(R.id.listView);
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1);
         listView.setAdapter(adapter);
         new Connection().execute();
+
+    }
+    private void openMaps(){
+        Intent intent = new Intent(this, MapActivity.class);
+        startActivity(intent);
 
     }
     @Override
@@ -89,37 +103,12 @@ public class Criminology extends AppCompatActivity {
                 return true;
             }case R.id.subitem4:
             {
-                Intent intent = new Intent(this, Monday.class);
+                Intent intent = new Intent(this, ByTheDay.class);
                 startActivity(intent);
                 return true;
             }case R.id.subitem5:
             {
-                Intent intent = new Intent(this, Tuesday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem6:
-            {
-                Intent intent = new Intent(this, Wednesday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem7:
-            {
-                Intent intent = new Intent(this, Thursday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem8:
-            {
-                Intent intent = new Intent(this, Friday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem9:
-            {
-                Intent intent = new Intent(this, Saturday.class);
-                startActivity(intent);
-                return true;
-            }case R.id.subitem10:
-            {
-                Intent intent = new Intent(this, Sunday.class);
+                Intent intent = new Intent(this, TouristAttractions.class);
                 startActivity(intent);
                 return true;
             }
