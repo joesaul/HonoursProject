@@ -25,7 +25,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="Tourist Attractions:\n • The Deep\n • Humber Bridge\n • Bonus Arena\n • Hull City Hall\n • Holy Trinity Church\n • East Park\n • Barton-Upon-Humber\n • Kcom Stadium \n •  Ferens Art Gallery \n • Wilberforce House\n • Hull Maritime Museum\n • Hull Marina \n • Streetlife Museum "
+        android:text="Tourist Attractions:\n • The Deep\n • Humber Bridge\n • Bonus Arena\n • Hull City Hall\n • Holy Trinity Church\n • East Park\n • Barton-Upon-Humber\n • Kcom Stadium \n • Ferens Art Gallery \n • Wilberforce House\n • Hull Maritime Museum\n • Hull Marina \n • Streetlife Museum "
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/imageView19"
         app:layout_constraintStart_toStartOf="parent"

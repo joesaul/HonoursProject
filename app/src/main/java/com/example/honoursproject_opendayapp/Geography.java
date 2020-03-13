@@ -201,7 +201,7 @@ public class Geography extends AppCompatActivity {
                         String building = geography_.getString("Building");
                         String room = geography_.getString("Room");
                         String description = geography_.getString("Description");
-                        String line =  starttime + " - " + finishtime + " | " + building + " - " + room + " | " + description;
+                        String line =  starttime + " - " + finishtime + " | " + description + " \n" + building + " - " + room ;
                         adapter.add(line);
                     }
 

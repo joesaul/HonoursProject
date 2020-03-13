@@ -201,7 +201,7 @@ public class Chemistry extends AppCompatActivity {
                         String building = chemistry_.getString("Building");
                         String room = chemistry_.getString("Room");
                         String description = chemistry_.getString("Description");
-                        String line =  starttime + " - " + finishtime + " | " + building + " - " + room + " | " + description;
+                        String line =  starttime + " - " + finishtime + " | " + description + " \n" + building + " - " + room ;
                         adapter.add(line);
                     }
 

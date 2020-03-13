@@ -3,10 +3,20 @@ package com.example.honoursproject_opendayapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.TextPaint;
+import android.text.method.LinkMovementMethod;
+import android.text.style.ClickableSpan;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+
 
 public class TouristAttractions extends AppCompatActivity {
 
@@ -16,7 +26,324 @@ public class TouristAttractions extends AppCompatActivity {
         setContentView(R.layout.activity_tourist_attractions);
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
+
+        TextView textView = findViewById(R.id.textView7);
+
+
+
+        String text = "Tourist Attractions:\n • The Deep\n • Humber Bridge\n • Bonus Arena\n • Hull City Hall\n • Holy Trinity Church\n • East Park\n • Barton-Upon-Humber\n • Kcom Stadium \n • Ferens Art Gallery \n • Wilberforce House\n • Hull Maritime Museum\n • Hull Marina \n • Streetlife Museum ";
+
+        SpannableString ss = new SpannableString(text);
+
+
+        ClickableSpan clickableSpan1 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                openTheDeep();
+
+            }
+
+            @Override
+            public void updateDrawState(TextPaint ds) {
+                super.updateDrawState(ds);
+                ds.setColor(Color.BLUE);
+
+            }
+        };
+
+        ClickableSpan clickableSpan2 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+
+                openHumberBridge();
+
+            }
+            @Override
+            public void updateDrawState(TextPaint textPaint) {
+                super.updateDrawState(textPaint);
+                textPaint.setColor(Color.BLUE);
+
+            }
+        };
+        ClickableSpan clickableSpan3 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                openBonusArena();
+
+            }
+
+            @Override
+            public void updateDrawState(TextPaint textPaint) {
+                super.updateDrawState(textPaint);
+                textPaint.setColor(Color.BLUE);
+
+            }
+        };
+        ClickableSpan clickableSpan4 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                openCityHall();
+
+            }
+
+            @Override
+            public void updateDrawState(TextPaint textPaint) {
+                super.updateDrawState(textPaint);
+                textPaint.setColor(Color.BLUE);
+
+            }
+        };
+        ClickableSpan clickableSpan5 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                openTrinityChurch();
+
+            }
+
+            @Override
+            public void updateDrawState(TextPaint textPaint) {
+                super.updateDrawState(textPaint);
+                textPaint.setColor(Color.BLUE);
+
+            }
+        };
+        ClickableSpan clickableSpan6 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                openEastPark();
+
+            }
+
+            @Override
+            public void updateDrawState(TextPaint textPaint) {
+                super.updateDrawState(textPaint);
+                textPaint.setColor(Color.BLUE);
+
+            }
+        };
+        ClickableSpan clickableSpan7 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                openBartonUponHumber();
+
+            }
+
+            @Override
+            public void updateDrawState(TextPaint textPaint) {
+                super.updateDrawState(textPaint);
+                textPaint.setColor(Color.BLUE);
+
+            }
+        };
+        ClickableSpan clickableSpan8 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                openKcomStadium();
+
+            }
+
+            @Override
+            public void updateDrawState(TextPaint textPaint) {
+                super.updateDrawState(textPaint);
+                textPaint.setColor(Color.BLUE);
+
+            }
+        };
+        ClickableSpan clickableSpan9 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                openArtGallery();
+
+            }
+
+            @Override
+            public void updateDrawState(TextPaint textPaint) {
+                super.updateDrawState(textPaint);
+                textPaint.setColor(Color.BLUE);
+
+            }
+        };
+        ClickableSpan clickableSpan10 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                openWilberforceHouse();
+
+            }
+
+            @Override
+            public void updateDrawState(TextPaint textPaint) {
+                super.updateDrawState(textPaint);
+                textPaint.setColor(Color.BLUE);
+
+            }
+        };
+        ClickableSpan clickableSpan11 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                openMuseum();
+
+            }
+
+            @Override
+            public void updateDrawState(TextPaint textPaint) {
+                super.updateDrawState(textPaint);
+                textPaint.setColor(Color.BLUE);
+
+            }
+        };
+        ClickableSpan clickableSpan12 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                openMarina();
+
+            }
+
+            @Override
+            public void updateDrawState(TextPaint textPaint) {
+                super.updateDrawState(textPaint);
+                textPaint.setColor(Color.BLUE);
+
+            }
+        };
+        ClickableSpan clickableSpan13 = new ClickableSpan() {
+            @Override
+            public void onClick(View widget) {
+                openStreetlife();
+
+            }
+
+            @Override
+            public void updateDrawState(TextPaint textPaint) {
+                super.updateDrawState(textPaint);
+                textPaint.setColor(Color.BLUE);
+
+            }
+        };
+
+        ss.setSpan(clickableSpan1, 24, 32, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan2, 35, 49, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan3, 52, 64, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan4, 67, 82, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan5, 86, 105, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan6, 109, 118, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan7, 121, 140, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan8, 144, 156, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan9, 161, 179, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan10, 183, 201, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan11, 204, 225, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan12, 228, 240, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        ss.setSpan(clickableSpan13, 245, 262, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        textView.setText(ss);
+        textView.setMovementMethod(LinkMovementMethod.getInstance());
+
+
     }
+    public void openTheDeep()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.thedeep.co.uk/"));
+        startActivity(openImplicitIntent);
+
+
+    }
+    public void openHumberBridge()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.humberbridge.co.uk/"));
+        startActivity(openImplicitIntent);
+
+
+    }
+    public void openBonusArena()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.bonusarenahull.com/"));
+        startActivity(openImplicitIntent);
+
+
+    }
+    public void openCityHall()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.hulltheatres.co.uk/"));
+        startActivity(openImplicitIntent);
+
+
+    }
+    public void openTrinityChurch()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://hullminster.org/"));
+        startActivity(openImplicitIntent);
+
+
+    }
+    public void openEastPark()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.hcandl.co.uk/sport-and-leisure-and-parks/your-local-park/east-park"));
+        startActivity(openImplicitIntent);
+
+
+    }
+    public void openBartonUponHumber()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.barton-upon-humber.org.uk/"));
+        startActivity(openImplicitIntent);
+
+
+    }
+    public void openKcomStadium()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://kcomstadium.com/"));
+        startActivity(openImplicitIntent);
+
+
+    }
+    public void openArtGallery()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.hcandl.co.uk/museums-and-galleries/ferens"));
+        startActivity(openImplicitIntent);
+
+
+    }
+    public void openWilberforceHouse()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.hcandl.co.uk/museums-and-galleries/wilberforce-house/wilberforce-house"));
+        startActivity(openImplicitIntent);
+
+
+    }
+    public void openMuseum()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.hcandl.co.uk/museums-and-galleries/hull-maritime-museum/maritime-museum"));
+        startActivity(openImplicitIntent);
+
+
+    }
+    public void openMarina()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://bwml.co.uk/hull-marina/"));
+        startActivity(openImplicitIntent);
+
+
+    }
+    public void openStreetlife()
+    {
+        Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("https://www.hcandl.co.uk/museums-and-galleries/streetlife-museum/streetlife-museum"));
+        startActivity(openImplicitIntent);
+
+
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();

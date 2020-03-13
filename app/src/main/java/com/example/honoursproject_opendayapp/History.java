@@ -201,7 +201,7 @@ public class History extends AppCompatActivity {
                         String building = history_.getString("Building");
                         String room = history_.getString("Room");
                         String description = history_.getString("Description");
-                        String line =  starttime + " - " + finishtime + " | " + building + " - " + room + " | " + description;
+                        String line =  starttime + " - " + finishtime + " | " + description + " \n" + building + " - " + room ;
                         adapter.add(line);
                     }
 

@@ -29,7 +29,7 @@
     <string name="spinnerhint">Please select a Timetable</string>
     <string name="select_timetable">Select a Timetable for the open day you are attending:</string>
     <string-array name="timetables">
-        <item>Please Select</item>
+        <item>Select Timetable</item>
         <item>Chemistry</item>
         <item>Computer Science</item>
         <item>Criminology</item>

@@ -115,8 +115,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 markerOptions.position(latLng);
                 mMap.clear();
                 mMap.addMarker(new MarkerOptions()
-                        .position(latLng)
-                        .title("Selected Location")).showInfoWindow();
+                        .position(latLng));
             }
         });
 

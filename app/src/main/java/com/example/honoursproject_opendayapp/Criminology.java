@@ -201,7 +201,7 @@ public class Criminology extends AppCompatActivity {
                         String building = criminology_.getString("Building");
                         String room = criminology_.getString("Room");
                         String description = criminology_.getString("Description");
-                        String line =  starttime + " - " + finishtime + " | " + building + " - " + room + " | " + description;
+                        String line =  starttime + " - " + finishtime + " | " + description + " \n" + building + " - " + room ;
                         adapter.add(line);
                     }
 

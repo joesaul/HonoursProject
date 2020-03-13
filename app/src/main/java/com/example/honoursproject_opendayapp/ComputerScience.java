@@ -201,7 +201,7 @@ public class ComputerScience extends AppCompatActivity {
                         String building = computer_science.getString("Building");
                         String room = computer_science.getString("Room");
                         String description = computer_science.getString("Description");
-                        String line =  starttime + " - " + finishtime + " | " + building + " - " + room + " | " + description;
+                        String line =  starttime + " - " + finishtime + " | " + description + " \n" + building + " - " + room ;
                         adapter.add(line);
                     }
 

@@ -201,7 +201,7 @@ public class Maths extends AppCompatActivity {
                         String building = maths_.getString("Building");
                         String room = maths_.getString("Room");
                         String description = maths_.getString("Description");
-                        String line =  starttime + " - " + finishtime + " | " + building + " - " + room + " | " + description;
+                        String line =  starttime + " - " + finishtime + " | " + description + " \n" + building + " - " + room ;
                         adapter.add(line);
                     }
 
