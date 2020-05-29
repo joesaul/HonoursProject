@@ -30,12 +30,12 @@ public class TouristAttractions extends AppCompatActivity {
         TextView textView = findViewById(R.id.textView7);
 
 
-
+        //declaring text
         String text = "Tourist Attractions:\n • The Deep\n • Humber Bridge\n • Bonus Arena\n • Hull City Hall\n • Holy Trinity Church\n • East Park\n • Barton-Upon-Humber\n • Kcom Stadium \n • Ferens Art Gallery \n • Wilberforce House\n • Hull Maritime Museum\n • Hull Marina \n • Streetlife Museum ";
 
         SpannableString ss = new SpannableString(text);
 
-
+        //setting which text is hyperlinked
         ClickableSpan clickableSpan1 = new ClickableSpan() {
             @Override
             public void onClick(View widget) {
@@ -239,6 +239,7 @@ public class TouristAttractions extends AppCompatActivity {
 
 
     }
+    //methods for when hyperlinked text is pressed
     public void openTheDeep()
     {
         Intent openImplicitIntent = new Intent(Intent.ACTION_VIEW,
@@ -343,13 +344,15 @@ public class TouristAttractions extends AppCompatActivity {
 
 
     }
-
+    //creating three-dot menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.dropdown_menu, menu);
         return true;
     }
+    //methods for when item selected in three-dot menu
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

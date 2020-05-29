@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 public class TaylorCourtGallery extends AppCompatActivity {
+    //variables
     ViewPager taylorcourtgallery;
 
     @Override
@@ -19,16 +20,20 @@ public class TaylorCourtGallery extends AppCompatActivity {
 
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_home_black_24dp);
 
+        //calling viewpageradapter to display gallery
         taylorcourtgallery = (ViewPager)findViewById(R.id.taylorcourtgallery);
         ViewPagerAdapterTaylorCourt viewPagerAdapter = new ViewPagerAdapterTaylorCourt(this);
         taylorcourtgallery.setAdapter(viewPagerAdapter);
     }
+    //creating three-dot menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.dropdown_menu, menu);
         return true;
     }
+    //methods for when item selected in three-dot menu
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

@@ -12,6 +12,7 @@ import android.widget.Button;
 
 public class TaylorCourt extends AppCompatActivity {
 
+    //variables
     private Button taylorcourtgallery_button;
 
     @Override
@@ -28,17 +29,20 @@ public class TaylorCourt extends AppCompatActivity {
             }
         });
     }
-
+    //button pressed methods
     private void openTaylorCourtGallery(){
         Intent intent = new Intent(this, TaylorCourtGallery.class);
         startActivity(intent);
     }
+    //creating three-dot menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.dropdown_menu, menu);
         return true;
     }
+    //methods for when item selected in three-dot menu
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

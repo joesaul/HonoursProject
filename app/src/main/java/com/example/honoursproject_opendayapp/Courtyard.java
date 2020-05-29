@@ -12,6 +12,7 @@ import android.widget.Button;
 
 public class Courtyard extends AppCompatActivity {
 
+    //variables
     private Button courtyardgallery_button;
 
     @Override
@@ -29,17 +30,19 @@ public class Courtyard extends AppCompatActivity {
             }
         });
     }
-
+    //open gallery
     private void openCourtyardGallery(){
         Intent intent = new Intent(this, CourtyardGallery.class);
         startActivity(intent);
     }
+    //create three-dot menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.dropdown_menu, menu);
         return true;
     }
+    //methods for when item selected in three-dot menu
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

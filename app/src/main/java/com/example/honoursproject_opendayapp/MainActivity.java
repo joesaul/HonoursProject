@@ -13,6 +13,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    //button variables
     private Button accommodation_button;
     private Button activities_button;
     private Button schedule_button;
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 openAccommodation();
             }
         });
-
+        //calling button methods
         activities_button = findViewById(R.id.activities_button);
         activities_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    //methods for when buttons are pressed
     private void openAccommodation(){
         Intent intent = new Intent(this, Accommodation.class);
         startActivity(intent);

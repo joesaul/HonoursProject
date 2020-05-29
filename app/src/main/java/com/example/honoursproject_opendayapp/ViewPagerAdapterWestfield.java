@@ -12,6 +12,7 @@ import androidx.viewpager.widget.ViewPager;
 
 public class ViewPagerAdapterWestfield extends PagerAdapter {
 
+    //variables
     private Context context;
     private LayoutInflater layoutInflater;
     private Integer[] images = {R.drawable.westfieldimage1, R.drawable.westfieldimage2, R.drawable.westfieldimage3, R.drawable.westfieldimage4, R.drawable.westfieldimage5, R.drawable.westfieldimage6, R.drawable.westfieldimage7};
@@ -19,6 +20,7 @@ public class ViewPagerAdapterWestfield extends PagerAdapter {
     public ViewPagerAdapterWestfield(Context context) {
         this.context = context;
     }
+
 
     @Override
     public int getCount() {
@@ -30,6 +32,7 @@ public class ViewPagerAdapterWestfield extends PagerAdapter {
         return view == object;
     }
 
+    //seting new images from array to display in gallery once user swipes
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {

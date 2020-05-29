@@ -126,7 +126,7 @@
 
     <Button
         android:id="@+id/uniofhullwebsite_button"
-        android:layout_width="292dp"
+        android:layout_width="320dp"
         android:layout_height="101dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"

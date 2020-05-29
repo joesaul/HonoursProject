@@ -27,6 +27,7 @@ import java.io.InputStreamReader;
 import java.net.URI;
 
 public class Parking extends AppCompatActivity {
+    //variables
     ListView listView;
     ArrayAdapter<String> adapter;
 
@@ -45,12 +46,15 @@ public class Parking extends AppCompatActivity {
         listView.setAdapter(adapter);
         new Parking.Connection().execute();
     }
+    //create three-dot menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.dropdown_menu, menu);
         return true;
     }
+    //methods for when item selected in three-dot menu
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -141,6 +145,7 @@ public class Parking extends AppCompatActivity {
         }
     }
     class Connection extends AsyncTask<String, String, String> {
+        //establish connection to server
 
         @Override
         protected String doInBackground(String... params) {
@@ -171,6 +176,7 @@ public class Parking extends AppCompatActivity {
             }
             return result;
         }
+        //read json data and display as string
 
         @Override
         protected void onPostExecute(String result){

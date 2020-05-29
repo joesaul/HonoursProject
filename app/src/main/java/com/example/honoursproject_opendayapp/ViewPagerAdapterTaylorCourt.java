@@ -12,6 +12,7 @@ import androidx.viewpager.widget.ViewPager;
 
 public class ViewPagerAdapterTaylorCourt extends PagerAdapter {
 
+    //variables
     private Context context;
     private LayoutInflater layoutInflater;
     private Integer[] images = {R.drawable.taylorcourtimage1, R.drawable.taylorcourtimage2, R.drawable.taylorcourtimage3, R.drawable.taylorcourtimage4, R.drawable.taylorcourtimage5, R.drawable.taylorcourtimage6, R.drawable.taylorcourtimage7};
@@ -29,6 +30,7 @@ public class ViewPagerAdapterTaylorCourt extends PagerAdapter {
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
         return view == object;
     }
+    //seting new images from array to display in gallery once user swipes
 
     @NonNull
     @Override

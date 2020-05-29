@@ -18,7 +18,7 @@ public class SplashScreen extends AppCompatActivity {
                 Intent i = new Intent(SplashScreen.this, MainActivity.class);
                 startActivity(i);
                 finish();
-
+            //how long splash screen displays for
             }
         },2000);
 

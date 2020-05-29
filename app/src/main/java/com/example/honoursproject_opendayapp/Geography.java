@@ -53,17 +53,21 @@ public class Geography extends AppCompatActivity {
         new Connection().execute();
 
     }
+    //live map
     private void openMaps(){
         Intent intent = new Intent(this, MapActivity.class);
         startActivity(intent);
 
     }
+    //creating three-dot menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.dropdown_menu, menu);
         return true;
     }
+    //methods for when item selected in three-dot menu
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -155,6 +159,7 @@ public class Geography extends AppCompatActivity {
     }
 
     class Connection extends AsyncTask<String, String, String> {
+        //establish connection to server
 
         @Override
         protected String doInBackground(String... params) {
@@ -185,6 +190,7 @@ public class Geography extends AppCompatActivity {
             }
             return result;
         }
+        //read json data and display as string
 
         @Override
         protected void onPostExecute(String result){

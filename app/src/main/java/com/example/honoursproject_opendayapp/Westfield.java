@@ -12,6 +12,7 @@ import android.widget.Button;
 
 public class Westfield extends AppCompatActivity {
 
+    //variables
     private Button westfieldgallery_button;
 
 
@@ -31,16 +32,20 @@ public class Westfield extends AppCompatActivity {
             }
         });
     }
+    //open westfield gallery
     private void openWestfieldGallery(){
         Intent intent = new Intent(this, WestfieldGallery.class);
         startActivity(intent);
     }
+    //creating three-dot menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.dropdown_menu, menu);
         return true;
     }
+    //methods for when item selected in three-dot menu
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

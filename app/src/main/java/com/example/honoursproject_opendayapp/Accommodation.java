@@ -12,6 +12,7 @@ import android.widget.Button;
 
 public class Accommodation extends AppCompatActivity {
 
+    //button variables
     private Button courtyard_button;
     private Button westfield_button;
     private Button taylorcourt_button;
@@ -47,24 +48,27 @@ public class Accommodation extends AppCompatActivity {
             }
         });
     }
-
+    //methods for when buttons pressed
+    //open courtyard screen
     private void openCourtyard(){
         Intent intent = new Intent(this, Courtyard.class);
         startActivity(intent);
 
     }
 
+    //open westfield screen
     private void openWestfield(){
         Intent intent = new Intent(this, Westfield.class);
         startActivity(intent);
 
     }
-
+    //open taylorcourt screen
     private void openTaylorCourt(){
         Intent intent = new Intent(this, TaylorCourt.class);
         startActivity(intent);
 
     }
+    //creating three-dot menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
@@ -72,6 +76,7 @@ public class Accommodation extends AppCompatActivity {
         return true;
 
     }
+    //methods for when item selected in three-dot menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

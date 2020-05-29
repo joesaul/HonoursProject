@@ -33,6 +33,8 @@ public class Schedule extends AppCompatActivity {
 
         Spinner mySpinner = (Spinner) findViewById(R.id.timetables_spinner);
 
+
+
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(Schedule.this,
                 android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.timetables));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -64,6 +66,7 @@ public class Schedule extends AppCompatActivity {
         });
 
     }
+    //create three-dot menu
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
@@ -71,6 +74,7 @@ public class Schedule extends AppCompatActivity {
         inflater.inflate(R.menu.dropdown_menu, menu);
         return true;
     }
+    //methods for when item selected in three-dot menu
 
         @Override
         public boolean onOptionsItemSelected (MenuItem item){

@@ -44,7 +44,7 @@ import java.util.List;
 
 
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback{
-
+    //launching map
     @Override
     public void onMapReady(GoogleMap googleMap) {
         Toast.makeText(this, "Map Launched", Toast.LENGTH_SHORT).show();
@@ -66,7 +66,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     }
 
 
-
+    //string variables
     private static final String FINE_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
     private static final String COURSE_LOCATION = Manifest.permission.ACCESS_COARSE_LOCATION;
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1234;
@@ -76,7 +76,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private EditText mSearchText;
     private ImageView mGps;
 
-    //vars
+    //variables
     private Boolean mLocationPermissionsGranted = false;
     private GoogleMap mMap;
 
@@ -93,6 +93,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     }
     private void init(){
 
+        //override enter button to perform search action
         mSearchText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
@@ -108,6 +109,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 return false;
             }
         });
+        //set marker when map is clicked
         mMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
@@ -129,6 +131,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
         hideSoftKeyboard();
     }
+    //finding location searched for in search bar
     private void geoLocate(){
 
         String searchString = mSearchText.getText().toString();
@@ -149,6 +152,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                     address.getAddressLine(0));
         }
     }
+    //retrieving decices last known location (current location)
     private void getDeviceLocation(){
 
         FusedLocationProviderClient mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
@@ -176,7 +180,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         }catch (SecurityException e){
         }
     }
-
+    //focussing camera on specified coordinates
     private void moveCamera(LatLng latLng, float zoom, String title){
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoom));
 
@@ -190,13 +194,13 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         hideSoftKeyboard();
     }
 
-
+    //initialising map
     private void initMap(){
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapfragment);
 
         mapFragment.getMapAsync(MapActivity.this);
     }
-
+    //requesting permission to use devices location
     private void getLocationPermission(){
         String[] permissions = {Manifest.permission.ACCESS_FINE_LOCATION,
                 Manifest.permission.ACCESS_COARSE_LOCATION};
@@ -218,7 +222,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                     LOCATION_PERMISSION_REQUEST_CODE);
         }
     }
-
+    //once permissions granted to use devices location
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         mLocationPermissionsGranted = false;
@@ -234,21 +238,24 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                     }
 
                     mLocationPermissionsGranted = true;
-                    //initialize our map
+                    //initialise map
                     initMap();
                 }
             }
         }
     }
+    //remove keyboard from screen
     private void hideSoftKeyboard(){
         this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
     }
+    //creating three-dot menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.dropdown_menu, menu);
         return true;
     }
+    //methods for when item selected in three-dot menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

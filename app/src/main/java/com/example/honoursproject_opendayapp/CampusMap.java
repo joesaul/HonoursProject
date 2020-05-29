@@ -13,6 +13,7 @@ import android.widget.Button;
 import com.github.chrisbanes.photoview.PhotoView;
 
 public class CampusMap extends AppCompatActivity {
+    //button variable declared
     private Button Map_button;
 
     @Override
@@ -30,22 +31,25 @@ public class CampusMap extends AppCompatActivity {
             }
         });
 
-        PhotoView photoView = (PhotoView)findViewById(R.id.campusmap);
-        photoView.setImageResource(R.drawable.campusmap);
+
 
 
     }
+    //method for when live map button pressed
     private void openMaps(){
         Intent intent = new Intent(this, MapActivity.class);
         startActivity(intent);
 
     }
+    //creating three-dot menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.dropdown_menu, menu);
         return true;
     }
+    //methods for when item selected in three-dot menu
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

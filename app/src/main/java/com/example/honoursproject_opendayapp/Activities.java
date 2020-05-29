@@ -12,6 +12,7 @@ import android.widget.Button;
 
 public class Activities extends AppCompatActivity {
 
+    //button variable names
     private Button bytheday_button;
     private Button touristattraction_button;
 
@@ -42,24 +43,26 @@ public class Activities extends AppCompatActivity {
 
 
     }
-
+    //methods for when buttons are pressed
+    //open each day of week activity screen
     private void openByTheDay(){
         Intent intent = new Intent(this, ByTheDay.class);
         startActivity(intent);
     }
-
+    //open tourist attractions screen
     private void openTouristAttractions(){
         Intent intent = new Intent(this, TouristAttractions.class);
         startActivity(intent);
     }
 
-
+    //creating three-dot menu
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.dropdown_menu, menu);
         return true;
     }
+    //creating three-dot menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
